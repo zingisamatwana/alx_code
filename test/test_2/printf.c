@@ -21,31 +21,28 @@ int _printf(const char *format, ...)
 		va_start(ap, format);
 		while (format[i] != '\0')
 		{
-			if (format[i] == '%' && (format[i + 1] >= 'a' && format[i + 1] <=
-						'z') )
+			if (format[i] == '%' && ((format[i + 1] >= 'a' && format[i + 1] <=
+					'z') || (format[i + 1] >= 'A' && format[i + 1] <= 'Z')))
 			{
-				switch (format[i + 1])
-				{
-				case 'd':
-					print_int(va_arg(ap, int));
-					i += 2;
-					flag = 0;
-					break;
-				case 's':
-					print_string(va_arg(ap, char *));
-					i += 2;
-					flag = 0;
-				default:
-					break;
-				}
+				count += link_data(format[i + 1], ap);
+				i += 2;
+				flag = 0;
+
+			}
+			if (format && (format[i] == format[i + 1]) && (format[i] == '%'))
+			{
+				flag = 0;
+				_putchar(format[i]);
 			}
 			if (format && format[i] != '%')
 				_putchar(format[i]);
 			if (flag)
-				i++;
+			{
+				count++;
+			}
+			i++;
 			flag = 1;
 		}
-		count++;
 		va_end(ap);
 	}
 
