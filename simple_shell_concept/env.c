@@ -1,4 +1,4 @@
-y#include <stdlib.h>
+#include <stdlib.h>
 #include <unistd.h>
 #include <fcntl.h>
 #include <stdio.h>
@@ -75,7 +75,7 @@ int main(int argc, char *argv[], char *envp[])
 	
 	for (int i = 0; i < c; i++)
 	{
-		char *usr = "ls";
+		char usr[3] = {'l','s','\0'};
 		int pln = strlen(patharr[i]) - 2;
 		int usrln = strlen(usr);
 		char s[pln + usrln];
