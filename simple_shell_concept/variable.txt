@@ -1,4 +1,4 @@
-/usr/local/sbin
+TY=/dev/pts/0in
 /usr/local/bin
 /usr/sbin
 /usr/bin
