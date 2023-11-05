@@ -1,0 +1,48 @@
+/usr/local/sbin
+/usr/local/bin
+/usr/sbin
+/usr/bin
+/sbin
+/bin
+/usr/games
+/usr/local/games
+/usr/lib/wsl/lib
+/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common
+/mnt/c/Program Files/Common Files/Oracle/Java/javapath
+/mnt/c/WINDOWS/system32
+/mnt/c/WINDOWS
+/mnt/c/WINDOWS/System32/Wbem
+/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/
+/mnt/c/WINDOWS/System32/OpenSSH/
+/mnt/c/Program Files (x86)/Common Files/Acronis/SnapAPI/
+/mnt/c/Program Files (x86)/Common Files/Acronis/VirtualFile/
+/mnt/c/Program Files (x86)/Common Files/Acronis/VirtualFile64/
+/mnt/c/Program Files/Crucial/Crucial Storage Executive
+/mnt/c/Program Files/MATLAB/R2022b/bin
+/mnt/c/Program Files/Git/cmdC
+/Program Files/Java/jdk-17.0.2/bin
+/mnt/c/Program Files/dotnet/
+/mnt/c/Program Files (x86)/STMicroelectronics/STM32 ST-LINK Utility/ST-LINK Utility
+/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/110/Tools/Binn/
+/mnt/c/Program Files (x86)/Microsoft SQL Server/120/Tools/Binn/
+/mnt/c/Program Files/Microsoft SQL Server/120/Tools/Binn/
+/mnt/c/Program Files/Microsoft SQL Server/120/DTS/Binn/
+/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/
+/mnt/c/Program Files/PuTTY/
+/mnt/c/Program Files/nodejs/
+/mnt/c/HashiCorp/Vagrant/bin
+/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL
+/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL
+/mnt/c/Users/mason/AppData/Local/Programs/Python/Python39/Scripts/
+/mnt/c/Users/mason/AppData/Local/Programs/Python/Python39/
+/mnt/c/Users/mason/AppData/Local/Microsoft/WindowsApps
+/mnt/c/Users/mason/AppData/Local/Programs/Julia-1.7.2/bin
+/mnt/c/MinGW/bin
+/mnt/c/Users/mason/OneDrive/Documents/ytdl/youtube-dl.exe
+/mnt/c/Users/mason/AppData/Local/Pandoc/
+/mnt/c/Users/mason/AppData/Local/Programs/Microsoft VS Code/bin
+/mnt/c/Users/mason/AppData/Local/GitHubDesktop/bin
+/mnt/c/Program Files/JetBrains/PyCharm 2022.2.4/bin
+/mnt/c/Program Files/JetBrains/PyCharm Community Edition 2022.2.4/bin
+/mnt/c/Users/mason/AppData/Roaming/npm
+/snap/bin
