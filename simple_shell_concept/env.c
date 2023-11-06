@@ -40,7 +40,7 @@ int main(int argc, char *argv[], char *envp[])
 	int c;
 
 	c = 0;
-	
+
 	stream = fopen("variable.txt", "r");
 	if (!stream)
 	{
@@ -49,68 +49,60 @@ int main(int argc, char *argv[], char *envp[])
 	}
 	while ((nread = getline(&line, &len, stream)) != EOF)
 	{
-//		printf("Retrieved line of length %zu:\n", nread);
-		//	char lines[nread + 3];
-		
-		//strcpy(lines, line);
-		/*
-		lines[nread - 1] = '/';
-		lines[nread ] = 'l';
-		lines[nread + 1] = 's';
-		lines[nread + 2] = '\n';
-		lines[nread + 3] = '\0';
-		*/
 		patharr[c] = strdup(line);
-			
-			//patharr[c] = line;
 		c++;
-		//fwrite(lines, nread + 3, 1, stdout);
 	}
 	fclose(stream);
+
 	for (int i = 0; i < c; i++)
 	{
 		printf("%d: %s", i, patharr[i]);
 	}
 	printf("\n ----------------------------------------------------------------\n");
-	
+
 	for (int i = 0; i < c; i++)
 	{
 		char usr[3] = {'l','s','\0'};
-		int pln = strlen(patharr[i]) - 2;
+		int pln = strlen(patharr[i]) - 1;
 		int usrln = strlen(usr);
-		char s[pln + usrln];
+
 		char *arr = patharr[i];
-		if (arr[pln-1]=='/')
+		char s[pln + usrln + 2];
+		if (arr[pln - 1] == '/')
 		{
 			int j;
-			
-		        for (j = 0; j < pln; j++)
+
+		    for (j = 0; j < pln; j++)
 			{
 				s[j] = arr[j];
 			}
 			for (; j < pln + usrln; j++)
 			{
-				s[j] = usr[j - pln - 1];
+				s[j] = usr[j - pln];
 			}
 			s[j] = '\0';
 		}
 		else
 		{
 			int j;
+
 			for (j = 0; j < pln; j++)
 			{
 				s[j] = arr[j];
 			}
-			s[++j] = '/';
-			for (; j < pln + 1 + usrln; j++)
+			s[j] = '/';
+			j++;
+			printf("j: %d\tpln: %d\tusrln: %d\n", j, pln, usrln);
+			for (; j < (pln + usrln + 1); j++)
 			{
-				s[j] = usr[j - pln];
+				s[j] = usr[j - pln - 1];
 			}
-			s[pln + usrln - 1] = '\0';
+			printf("j: %d\tpln: %d\tusrln: %d\n", j, pln, usrln);
+			s[pln + usrln + 1] = '\0';
 		}
 		printf("%s\n", s);
 	}
-	
+
 	exit(EXIT_SUCCESS);
 }
-		
+
